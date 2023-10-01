@@ -9,25 +9,25 @@ const router = express.Router();
 const upload = require('multer')();
 
 
-router.post("/register",Registrationhandler,userRegistration)//+
-router.post("/login",Loginhandler,userLogin)//+
-router.delete("/delete/:id",validateToken,Deletehandler,userDelete)//+
+router.post("/register",Registrationhandler,userRegistration)
+router.post("/login",Loginhandler,userLogin)
+router.delete("/delete/:id",validateToken,Deletehandler,userDelete)
 
-router.get("/current",validateToken,userCurrent)//+
+router.get("/current",validateToken,userCurrent)
 
-router.put("/update/info/:id",validateToken,Updatehandler,userUpdateInfo)//+
-router.put("/update/password/:id",validateToken,UpdatePasswordhandler,userUpdatePassword)//+
-router.put("/update/email/:id",validateToken,UpdateEmailhandler,userUpdateEmail)//+
+router.put("/update/info/:id",validateToken,Updatehandler,userUpdateInfo)
+router.put("/update/password/:id",validateToken,UpdatePasswordhandler,userUpdatePassword)
+router.put("/update/email/:id",validateToken,UpdateEmailhandler,userUpdateEmail)
 
-router.get("/getAll",validateToken,GetAllUsershandler,userGetAll)//+
-router.get("/get/:id",softValidateToken,GetUserhandler,userGet)//+
+router.get("/getAll",validateToken,GetAllUsershandler,userGetAll)
+router.get("/get/:id",softValidateToken,GetUserhandler,userGet)
 
 
-router.post("/subscribe",validateToken,UserSubscribe)//+
-router.post("/unsubscribe",validateToken,UserUnsubscribe)//+
-router.get("/followers/:id",UserFollowers)//+
-router.get("/following/:id",UserFollowing)//+
-router.get("/follow/:userId/:authId",isUserFollow)//+
+router.post("/subscribe",validateToken,UserSubscribe)
+router.post("/unsubscribe",validateToken,UserUnsubscribe)
+router.get("/followers/:id",UserFollowers)
+router.get("/following/:id",UserFollowing)
+router.get("/follow/:userId/:authId",isUserFollow)
 
 
 

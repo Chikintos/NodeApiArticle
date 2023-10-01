@@ -7,10 +7,10 @@ const router = express.Router();
 
 
 
-router.post("/create",validateToken,CreateArticlehandler,articleCreate)//+
-router.get("/get/:id",articleGet)//+
-router.delete("/delete/:id",validateToken,articleDelete)//+
-router.put("/update/:id",validateToken,articleUpdatehandler,articleUpdate)//+
-router.get("/search",SearchArticlehandler,articleSearch)//+
+router.post("/create",validateToken,CreateArticlehandler,articleCreate)
+router.get("/get/:id",articleGet)
+router.delete("/delete/:id",validateToken,articleDelete)
+router.put("/update/:id",validateToken,articleUpdatehandler,articleUpdate)
+router.get("/search",SearchArticlehandler,articleSearch)
 
 module.exports=router
